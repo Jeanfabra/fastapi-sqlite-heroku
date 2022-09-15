@@ -1,10 +1,13 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+from databases import Database
 
+SQLALCHEMY_DATABASE_URL = Database("sqlite:///p1_sqlite_database.db")
+engine = create_engine(
+    SQLALCHEMY_DATABASE_URL, connect_args = {"check_same_thread": False}
+)
 
-SQLALCHEMY_DATABASE_URL = "mysql+pymysql://root:root@localhost:3306/pi_data03"
-engine = create_engine(SQLALCHEMY_DATABASE_URL, echo = True)
 
 # Each instance of SessionLocal class will be database session
 SessionLocal = sessionmaker(autocommit = False, autoflush = False, bind = engine)
