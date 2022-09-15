@@ -10,13 +10,13 @@ models.Base.metadata.create_all(bind = engine)
 
 app = FastAPI()
 
-@app.on_event("startup")
-async def database_connect():
-    await database.connect()
+# @app.on_event("startup")
+# async def database_connect():
+#     await database.connect()
 
-@app.on_event("shutdown")
-async def database_disconnect():
-    await database.disconnect()
+# @app.on_event("shutdown")
+# async def database_disconnect():
+#     await database.disconnect()
 
 # @app.get("/most-races-circuit")
 # async def fetch_data(Cantidad_de_Resultados: int):

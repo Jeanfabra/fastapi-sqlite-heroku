@@ -37,6 +37,7 @@ class driver(Base):
 
     driverId = Column(Integer, primary_key = True, index = True)
     driverRef = Column(String, index = True)
+    driverNumber = Column(String, index = True)
     driverCode = Column(String, index = True)
     driverName = Column(String, index = True)
     dob = Column(String)
