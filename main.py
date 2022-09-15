@@ -19,7 +19,7 @@ def get_db():
         db.close()
 
 @app.get("/")
-def get_docs():
+async def get_docs():
     return "Welcome to Formula 1 Dataset API. Feel free to check the documentation (/docs)"
 
 @app.get("/year-races")
