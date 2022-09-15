@@ -10,20 +10,6 @@ models.Base.metadata.create_all(bind = engine)
 
 app = FastAPI()
 
-# @app.on_event("startup")
-# async def database_connect():
-#     await database.connect()
-
-# @app.on_event("shutdown")
-# async def database_disconnect():
-#     await database.disconnect()
-
-# @app.get("/most-races-circuit")
-# async def fetch_data(Cantidad_de_Resultados: int):
-#     Consulta = "SELECT ci.name as Nombre_Circuito,count(ci.circuitId) as Veces_corrido FROM races ra JOIN circuits ci  ON (ra.circuitId = ci.circuitId) group by ci.circuitId order by Veces_corrido desc limit {};".format(str(Cantidad_de_Resultados))
-#     results = await database.fetch_all(query=Consulta)
-#     return  results
-
 # Dependency
 def get_db():
     db = SessionLocal()
