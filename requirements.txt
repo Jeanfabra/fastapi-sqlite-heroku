@@ -38,7 +38,7 @@ PyMySQL==1.0.2
 pyparsing 
 python-dateutil 
 pytz==2022.2.1
-pywin32==303
+pypiwin32==223
 pyzmq 
 six 
 skforecast==0.4.3
