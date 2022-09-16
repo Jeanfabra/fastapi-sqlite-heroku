@@ -58,11 +58,13 @@ For deployment in Heroku, the explicit requirements were established in requirem
 * [How to deploy your apps in Heroku](https://devcenter.heroku.com/articles/heroku-cli)
 
 ## Some API endpoints check for more in documentation
-**/docs** documentation
-**/year-races** year with most races
-**/best-driver** driver with the highest number of first position
-**/most-run** most drive circuit name
-**/best-score** driver with the highest points
+* **/docs** documentation
+* **/year-races** year with most races
+* **/best-driver** driver with the highest number of first position
+* **/most-run** most drive circuit name
+* **/best-score** driver with the highest points
+
+[Heroku Deploy Link](https://fastapi-database-formula1-read.herokuapp.com/docs)
 
 ## Contact
 
