@@ -5,10 +5,36 @@ from models import models
 from schemas import schemas
 from config import database
 from config.database import SessionLocal, engine
+from starlette.responses import RedirectResponse
+
 
 models.Base.metadata.create_all(bind = engine)
 
-app = FastAPI()
+description = '''
+## Formula1 API development and Heroku deploy using **FastAPI framework** and data extraction from **SQLite** local hosted database.
+[Github Repository](https://github.com/Jeanfabra/fastapi-sqlite-heroku) \n
+[LinkedIn](https://www.linkedin.com/in/jeanfabra/)
+
+
+### Information about:
+* circuits
+* races
+* drivers
+* constructors
+* pitstops
+* qualifying
+* laptimes
+* results
+
+Feel free to check the documentation for endpoints (/docs)
+
+Copyright 2022 - Jean Paul Fabra
+
+email: jeanfabra11@gmail.com
+'''
+
+app = FastAPI(title = "Formula 1 WC API", description = description)
+
 
 # Dependency
 def get_db():
@@ -19,8 +45,8 @@ def get_db():
         db.close()
 
 @app.get("/")
-async def get_docs():
-    return "Welcome to Formula 1 Dataset API. Feel free to check the documentation (/docs)"
+def get_docs():
+    return RedirectResponse(url = "/docs")
 
 @app.get("/year-races")
 def read_year_races(db: Session = Depends(get_db)):
@@ -92,6 +118,3 @@ def read_laptimes(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)
 def read_pitstops(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     pitstops = crud.get_pitstops(db, skip = skip, limit = limit)
     return pitstops
-
-
-
