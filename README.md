@@ -1,6 +1,10 @@
 # fastapi-sqlite-heroku
 
+<<<<<<< HEAD
 API development and Heroku deploy using **FastAPI framework** and data extraction from **SQLite** local hosted database.
+=======
+API development and Heroku deploy using FastAPI framework and data extraction from SQLite local hosted database.
+>>>>>>> bdf6c6d72475d33c9416fc2a45ff43246419257e
 
 ## General Steps
 
@@ -57,6 +61,7 @@ For deployment in Heroku, the explicit requirements were established in requirem
 * [SQL Queries as Python code with SQLAlchemy](https://hackersandslackers.com/database-queries-sqlalchemy-orm/)
 * [How to deploy your apps in Heroku](https://devcenter.heroku.com/articles/heroku-cli)
 
+<<<<<<< HEAD
 ## Some API endpoints check for more in documentation
 **/docs** documentation
 **/year-races** year with most races
@@ -64,6 +69,8 @@ For deployment in Heroku, the explicit requirements were established in requirem
 **/most-run** most drive circuit name
 **/best-score** driver with the highest points
 
+=======
+>>>>>>> bdf6c6d72475d33c9416fc2a45ff43246419257e
 ## Contact
 
 Greetings,
