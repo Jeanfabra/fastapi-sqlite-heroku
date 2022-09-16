@@ -69,4 +69,6 @@ For deployment in Heroku, the explicit requirements were established in requirem
 ## Contact
 
 Greetings,
-Jean Paul Fabra Ruiz: jeanfabra11@gmail.com LinkedIn: https://www.linkedin.com/in/jeanfabra/
+Jean Paul Fabra Ruiz: jeanfabra11@gmail.com 
+
+LinkedIn: https://www.linkedin.com/in/jeanfabra/
