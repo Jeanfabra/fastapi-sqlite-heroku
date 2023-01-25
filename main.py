@@ -11,7 +11,7 @@ from starlette.responses import RedirectResponse
 models.Base.metadata.create_all(bind = engine)
 
 description = '''
-## Formula1 API development and Heroku deploy using **FastAPI framework** and data extraction from **SQLite** local hosted database.
+## Formula1 API development and Railway deploy using **FastAPI framework** and data extraction from **SQLite** local hosted database.
 [Github Repository](https://github.com/Jeanfabra/fastapi-sqlite-heroku) \n
 [LinkedIn](https://www.linkedin.com/in/jeanfabra/)
 
